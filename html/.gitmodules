@@ -1,0 +1,6 @@
+[submodule "app/Plugin/Environments"]
+	path = app/Plugin/Environments
+	url = git://github.com/OctoBear/cakephp-environments.git
+[submodule "app/Plugin/DebugKit"]
+	path = app/Plugin/DebugKit
+	url = https://github.com/cakephp/debug_kit.git

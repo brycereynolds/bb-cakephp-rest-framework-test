@@ -1,0 +1,28 @@
+// What did I do to setup CakePHP rest server
+
+1. Install composer (use global)
+    https://getcomposer.org/
+
+2. Downloaded cakephp 2.4.5
+    - standard cake setup (directory permissions, salt and cypher keys, database.php created and db table exists)
+
+3. Added a few git submodules
+    [~root/app] git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+    [~root/app] git submodule init
+    [~root/app] git submodule update
+
+4. Configuration changes
+    [app/Config/bootstrap.php]
+        CakePlugin::load('DebugKit');
+
+    [app/Config/core.php]
+        Change debug value to 1
+        Configure::write('debug', 1);
+
+5. Remove sql_dump from default.ctp - this is so DebugKit plugin will show SQL log
+    <?php echo $this->element('sql_dump'); ?>
+
+6. composer install
+
+7. Setup Environments
+    https://github.com/OctoBear/cakephp-environments

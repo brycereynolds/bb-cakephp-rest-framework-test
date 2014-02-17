@@ -1,0 +1,3 @@
+[submodule "html/app/Plugin/BBRest"]
+	path = html/app/Plugin/BBRest
+	url = https://github.com/brycereynolds/bb-cakephp-rest-plugin.git
